@@ -1,6 +1,6 @@
 import os
 
-# Method to generate small primes in a list.
+# Method to generate small primes in a file.
 def genPrimes():
     primes = []
     for i in range(2,1299827):
