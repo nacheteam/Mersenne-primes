@@ -3,7 +3,7 @@ Approach to calculating big Mersenne primes with arbitrary precision numbers.
 I'll try to do so in Python using as first approach the Lucas-Lehmer primality test for Mersenne primes.
 
 ## How to run it
-I recommend you byte-compile it first by using:
+I recommend you byte-compile it first and then run it by using:
 ``` bash
     python3.5 -m compileall
     python3.5 main.py
