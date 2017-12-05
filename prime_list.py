@@ -11,5 +11,12 @@ def genPrimes():
             primes.append(i)
     f = open("prime_list.txt", "w")
     for i in range(len(primes)-2):
-        f.write(str(prime_item) + ", ")
+        f.write(str(prime_item) + ",")
     f.write(str(primes[-1]))
+
+# Obtain prime list from txt.
+def readPrimes():
+    f = open("prime_list.txt", "r")
+    prime_line = f.read()
+    primes = prime_line.split(",")
+    return primes
