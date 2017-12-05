@@ -8,6 +8,7 @@ I'll try to do so in Python using as first approach the Lucas-Lehmer primality t
 - Use Trial Factoring to check for small factors:
 
 23 = 10111
+
 | Square | top | bit | mul by 2 | mod 47 |
 |--------|-----|-----|----------|--------|
 | 1*1=1  | 1   | 0111 | 1*2=2   |  2 |
