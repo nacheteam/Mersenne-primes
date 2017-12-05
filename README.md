@@ -2,6 +2,13 @@
 Approach to calculating big Mersenne primes with arbitrary precision numbers.  
 I'll try to do so in Python using as first approach the Lucas-Lehmer primality test for Mersenne primes.
 
+## How to run it
+I recommend you byte-compile it first by using:
+``` bash
+    python3.5 -m compileall
+    python3.5 main.py
+```
+
 ## Tips
 
 - If 2^p-1 is prime then p is prime (so if p is not prime you should not check that number).  
