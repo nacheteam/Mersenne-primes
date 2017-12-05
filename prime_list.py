@@ -23,5 +23,8 @@ def genPrimes():
 def readPrimes():
     f = open("prime_list.txt", "r")
     prime_line = f.read()
-    primes = prime_line.split(",")
+    primes_str = prime_line.split(",")
+    primes=[]
+    for prime_str in primes_str:
+        primes.append(int(prime_str))
     return primes
