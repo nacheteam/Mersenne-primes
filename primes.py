@@ -19,3 +19,24 @@ def isPrimeLL(exponent):
         exponent-=1
 
     return s==0;
+
+# Obtain bit string from a number.
+
+def bin(s):
+    return str(s) if s<=1 else bin(s>>1) + str(s&1)
+
+# Trial factoring to discard exponents.
+# Returns false if not prime.
+
+def trialFactoring(factors, exponent):
+    previous=1
+    for factor in factors:
+        bits = bin(factor)
+        for i in range(0,len(bits)-1):
+            square = previous*previous
+            if bits[i]=="1":
+                square*=2
+                previous = square%factor
+        if previous==1:
+            return False
+    return True
