@@ -1,12 +1,41 @@
 import os
 
+MAX_NUMBER_TO_CHECK = 1299821
+
+# Generate primes with eratostenes method.
+def genPrimesEratostenes():
+    real_primes=[]
+    primes = dict()
+    for i in range(2,MAX_NUMBER_TO_CHECK):
+        primes[i]=True
+    for i in range(2,MAX_NUMBER_TO_CHECK):
+        if(i%2500==0):
+            os.system("clear")
+            print(str(int((i/MAX_NUMBER_TO_CHECK)*100))+"% completado")
+        for j in range(i+i,MAX_NUMBER_TO_CHECK,i):
+            primes[j]=False
+    for i in range(2,MAX_NUMBER_TO_CHECK):
+        if primes[i]:
+            real_primes.append(i)
+    f = open("prime_list.txt", "w")
+    for prime in real_primes:
+        f.write(str(prime) + ",")
+    f.close()
+    f = open("prime_list.txt", "r")
+    prime_line = f.read()
+    f.close()
+    f = open("prime_list.txt", "w")
+    f.write(prime_line[:-2])
+    f.close()
+
+
 # Method to generate small primes in a file.
 def genPrimes():
     primes = []
-    for i in range(2,1299827):
+    for i in range(2,MAX_NUMBER_TO_CHECK):
         if(i%2500==0):
             os.system("clear")
-            print(str(int((i/1299827)*100))+"% completado")
+            print(str(int((i/MAX_NUMBER_TO_CHECK)*100))+"% completado")
         prime=True
         for j in range(2,int(i/2+1)):
             if i%j==0:
