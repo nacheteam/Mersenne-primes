@@ -2,6 +2,24 @@
 Approach to calculating big Mersenne primes with arbitrary precision numbers.  
 I'll try to do so in Python using as first approach the Lucas-Lehmer primality test for Mersenne primes.
 
+## How it works
+It makes as the first step a list of small primes allocated in 'prime_list.txt' file. To generate these primes again there are two ways:  
+```bash
+    python3.5 -m compileall
+    python3.5
+```  
+
+```python
+    import prime_list
+    prime_list.genPrimesEratostenes()
+    prime_list.genPrimes()
+```
+
+So the two ways of generating the primes are Eratostenes and the conventional method. I recommend using Eratostenes as the normal method takes more than 20 minutes and Eratostenes just 10 seconds or less.  
+After doing so you should run it as mentioned in the next section.  
+What this will do is check the primes with the tips said at the bottom.
+
+
 ## How to run it
 I recommend you byte-compile it first and then run it by using:
 ``` bash
