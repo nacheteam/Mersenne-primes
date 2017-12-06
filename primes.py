@@ -33,6 +33,8 @@ def bin(s):
 # Returns false if not prime.
 
 def trialFactoring(factors, exponent):
+    if exponent%8==1 or exponent%8==7:
+        return False
     previous=1
     for factor in factors:
         bits = bin(factor)
