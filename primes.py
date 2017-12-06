@@ -19,7 +19,7 @@ def isPrimeLL(exponent,factors):
     s=4
     number = mersennePrime(exponent)
     while exponent>2:
-        s=int((s*s - mersennePrime(2))%number)
+        s=int((s*s - 2)%number)
         exponent-=1
 
     return s==0;
@@ -33,14 +33,8 @@ def bin(s):
 # Returns false if not prime.
 
 def trialFactoring(factors, exponent):
-    previous=1
     for factor in factors:
-        bits = bin(factor)
-        for i in range(0,len(bits)-1):
-            square = previous*previous
-            if bits[i]=="1":
-                square*=2
-                previous = square%factor
-        if previous==1:
-            return False
+        if factor%(2*exponent)==1:
+            if exponent%factor==0:
+                return False
     return True

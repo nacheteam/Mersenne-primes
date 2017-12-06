@@ -6,9 +6,9 @@ def main():
     prime_array = []
     factors = prime_list.readPrimes()
     good_factors = prime_list.checkModulus(factors)
-    for i in range(10000,10100):
+    for i in range(1,3500):
         print(str(i))
-        if primes.isPrimeLL(int(i),good_factors[:100]):
+        if primes.isPrimeLL(int(i),good_factors):
             prime_array.append(primes.mersennePrime(i))
     for prime in prime_array:
         print(str(prime) + " is a Mersenne prime.\n")
