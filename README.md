@@ -12,7 +12,7 @@ I recommend you byte-compile it first and then run it by using:
 ## Tips
 
 - If 2^p-1 is prime then p is prime (so if p is not prime you should not check that number).  
-- Use Trial Factoring to check for small factors:
+- Use Trial Factoring to look for small factors:
 
 23 = 10111
 
