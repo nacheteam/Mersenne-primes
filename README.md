@@ -18,6 +18,7 @@ It makes as the first step a list of small primes allocated in 'prime_list.txt' 
 So the two ways of generating the primes are Eratostenes and the conventional method. I recommend using Eratostenes as the normal method takes more than 20 minutes and Eratostenes just 10 seconds or less.  
 After doing so you should run it as mentioned in the next section.  
 What this will do is check the primes with the tips said at the bottom.  
+
 **DISCLAIMER:** Eratostenes works really fast but it does consumes a lot of RAM as it needs an array with the same number of candidates to be prime filled with booleans for my implemmentation. This means it will take (in the best case) 32 bits * number_of_candidates (32 bits is the standard implementation in python). So that for 1.000.000.000 candidates it will be 32 bits * 1.000.000.000 = 3814 MB just for the boolean vector.
 
 
