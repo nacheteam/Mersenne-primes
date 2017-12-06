@@ -28,3 +28,12 @@ def readPrimes():
     for prime_str in primes_str:
         primes.append(int(prime_str))
     return primes
+
+
+# Filter primes that are 1 or 7 modulus 8.
+def checkModulus(factors):
+    new_factors=[]
+    for factor in factors:
+        if factor%8==1 or factor%8==7:
+            new_factors.append(factor)
+    return new_factors

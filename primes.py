@@ -18,8 +18,6 @@ def isPrimeLL(exponent,factors):
 
     s=4
     number = mersennePrime(exponent)
-    if number%8!=1 and number%8!=7:
-        return False
     while exponent>2:
         s=int((s*s - mersennePrime(2))%number)
         exponent-=1
