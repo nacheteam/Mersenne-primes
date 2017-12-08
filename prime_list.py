@@ -17,7 +17,7 @@ def genPrimesEratostenes():
     for i in range(2,MAX_NUMBER_TO_CHECK):
         if primes[i]:
             real_primes.append(i)
-    return real_primes
+    #return real_primes
     f = open("prime_list.txt", "w")
     for prime in real_primes:
         f.write(str(prime) + ",")
