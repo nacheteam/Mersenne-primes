@@ -3,7 +3,7 @@ import time
 import prime_list
 import threading
 
-THREAD_NUMBER = 50
+THREAD_NUMBER = 4
 lock = threading.Lock()
 prime_array = []
 threads = []
@@ -25,6 +25,7 @@ def main():
             threads[j].start()
         for j in range(THREAD_NUMBER):
             threads[j].join()
+    print(str(len(prime_array)) + " primes were found.\n")
     for prime in prime_array:
         print(str(prime) + " is a Mersenne prime.\n")
 
