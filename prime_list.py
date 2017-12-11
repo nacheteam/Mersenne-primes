@@ -1,6 +1,18 @@
+################################################################################
+##                            IMPORTED MODULES                                ##
+################################################################################
+
 import os
 
+################################################################################
+##                              GLOBAL VARIABLES                              ##
+################################################################################
+
 MAX_NUMBER_TO_CHECK = 1299821
+
+################################################################################
+##                         PRIMES GENERATION FUNCTIONS                        ##
+################################################################################
 
 # Generate primes with eratostenes method.
 def genPrimesEratostenes():
@@ -49,6 +61,18 @@ def genPrimes():
         f.write(str(primes[i]) + ",")
     f.write(str(primes[-1]))
 
+# Filter primes that are 1 or 7 modulus 8.
+def checkModulus(factors):
+    new_factors=[]
+    for factor in factors:
+        if factor%8==1 or factor%8==7:
+            new_factors.append(factor)
+    return new_factors
+
+################################################################################
+##                           READING PRIMES FROM TXT                          ##
+################################################################################
+
 # Obtain prime list from txt.
 def readPrimes():
     f = open("prime_list.txt", "r")
@@ -58,12 +82,3 @@ def readPrimes():
     for prime_str in primes_str:
         primes.append(int(prime_str))
     return primes
-
-
-# Filter primes that are 1 or 7 modulus 8.
-def checkModulus(factors):
-    new_factors=[]
-    for factor in factors:
-        if factor%8==1 or factor%8==7:
-            new_factors.append(factor)
-    return new_factors
