@@ -47,3 +47,7 @@ I recommend you byte-compile it first and then run it by using:
 Thus 2^(23)=1 mod 47 and our Mersenne candidate isn't prime.
 
 - Any factor q of 2^p-1 must be of the form 2kp+1 and q = 1 mod 8 or q = 7 mod 8.
+
+## Contributing
+
+**__CHECK CONTRIBUTING.md FILE__**
