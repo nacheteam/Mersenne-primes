@@ -19,9 +19,11 @@ def sophieGermainePrime(number):
 # Simple primality test.
 def isPrime(number):
     i = 2
-    while i <= number/2:
-        if number%i==0:
+    # Integer division is used.
+    while i <= int(number//2):
+        if int(number%i)==0:
             return False
+        i+=1
     return True
 
 # Test wether the Mersenne prime candidate is prime with Lucas-Lehmer primality test.

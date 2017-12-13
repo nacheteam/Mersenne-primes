@@ -27,7 +27,7 @@ def checkPrime(exponent,factors):
             prime_array.append(primes.mersennePrime(exponent))
 
 def printPrimes(prime_list):
-    print(str(len(primes)) + " primes were found.\n")
+    print(str(len(prime_list)) + " primes were found.\n")
     for prime in prime_list:
         print(str(prime) + " is a Mersenne prime.\n")
         if primes.sophieGermainePrime(prime):

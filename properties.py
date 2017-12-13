@@ -11,4 +11,5 @@ def divisors(number):
     while i < number/2:
         if number%i==0:
             div.append(i)
+        i+=1
     return div
