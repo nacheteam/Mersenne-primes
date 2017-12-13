@@ -6,6 +6,7 @@ import primes
 import time
 import prime_list
 import threading
+import properties
 
 ################################################################################
 ##                              GLOBAL VARIABLES                              ##
@@ -25,6 +26,13 @@ def checkPrime(exponent,factors):
         with lock:
             prime_array.append(primes.mersennePrime(exponent))
 
+def printPrimes(primes):
+    print(str(len(primes)) + " primes were found.\n")
+    for prime in primes:
+        print(str(prime) + " is a Mersenne prime.\n")
+        if primes.sophieGermainePrime(prime):
+            print("It is also a Sophie's Germaine prime.\n")
+
 ################################################################################
 ##                                MAIN PROGRAM                                ##
 ################################################################################
@@ -41,11 +49,7 @@ def main():
             threads[j].start()
         for j in range(THREAD_NUMBER):
             threads[j].join()
-    print(str(len(prime_array)) + " primes were found.\n")
-    for prime in prime_array:
-        print(str(prime) + " is a Mersenne prime.\n")
-        if primes.sophieGermainePrime(prime):
-            print("It is also a Sophie's Germaine prime.\n")
+    printPrimes(prime_array)
 
 start = time.clock()
 main()
