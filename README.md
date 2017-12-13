@@ -5,7 +5,7 @@ I'll try to do so in Python using as first approach the Lucas-Lehmer primality t
 ## How it works
 It makes as the first step a list of small primes allocated in `prime_list.txt` file. To generate these primes again there are two ways:  
 ```bash
-    python3.5 -m compileall
+    python3.5 -m compileall .
     python3.5
 ```  
 
