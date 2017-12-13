@@ -44,6 +44,8 @@ def main():
     print(str(len(prime_array)) + " primes were found.\n")
     for prime in prime_array:
         print(str(prime) + " is a Mersenne prime.\n")
+        if primes.sophieGermainePrime(prime):
+            print("It is also a Sophie's Germaine prime.\n")
 
 start = time.clock()
 main()

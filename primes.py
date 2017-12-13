@@ -12,6 +12,18 @@ import prime_list
 def mersennePrime(exponent):
     return int(pow(2,exponent)-1)
 
+# True if the number is a Sophie's Germaine prime.
+def sophieGermainePrime(number):
+    return isPrime(2*number+1)
+
+# Simple primality test.
+def isPrime(number):
+    i = 2
+    while i <= number/2:
+        if number%i==0:
+            return False
+    return True
+
 # Test wether the Mersenne prime candidate is prime with Lucas-Lehmer primality test.
 # Lucas Lehmer only works with even exponents.
 def isPrimeLL(exponent,factors):
